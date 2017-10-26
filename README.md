@@ -18,3 +18,5 @@ git clone https://github.com/kushalraghavpoojari/udacity-react-mobile-flashcards
 * `npm start`
 
 Use Expo IDE to test on an iOS device by scanning the QR code that appears once the app starts running
+
+Tested on iOS device
