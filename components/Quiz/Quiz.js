@@ -32,7 +32,6 @@ class Quiz extends Component {
     }
 
     render() {
-        console.log(this.props)
         const {index, correct, shouldShow} = this.state
         const {questions} = this.props.navigation.state.params
         const questionExists = index < questions.length;

@@ -1,6 +1,6 @@
 import {AsyncStorage} from 'react-native'
 
-export const KEY = '@MySuperStore:key'
+export const KEY = '@MySuperStore:key2'
 
 let data = {
     React: {

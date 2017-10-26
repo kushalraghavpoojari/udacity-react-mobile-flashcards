@@ -15,10 +15,9 @@ class NewDeck extends Component {
             Alert.alert('Warning', 'Deck name cannot be empty');
             return 
         }
-
-        addNewDeck(deckTitle)
-        console.log(this.props)
-        this.props.addDeck(deckTitle)
+        const newDeck = {[deckTitle]: {title: deckTitle, questions: []}};
+        addNewDeck(newDeck)
+        this.props.addDeck(newDeck)
 
         this.props.navigation.navigate('IndividualDeck', {title: deckTitle, questions: []})
         this.setState({deckTitle: ''})
