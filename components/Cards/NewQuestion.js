@@ -10,7 +10,6 @@ class NewQuestion extends Component {
         answer: ''
     }
     submitQuestion = () => {
-        console.log(this.props)
         const {question, answer} = this.state
         if(question === '' || answer === '') {
             Alert.alert('Error!', 'Question & Answer has to be filled')
@@ -102,9 +101,9 @@ const styles = StyleSheet.create({
     }
 })
 
-function mapStateToProps(state) {
+function mapStateToProps(decks) {
     return {
-        decks: state,
+        decks
     }
 }
 

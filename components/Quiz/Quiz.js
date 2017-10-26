@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native'
-import {clearLocalNotificiation, setLocalNotificiation} from '../../utils/Notifications'
+import {clearLocalNotification, setLocalNotificiation} from '../../utils/Notifications'
 
 class Quiz extends Component {
     state = {
@@ -24,7 +24,7 @@ class Quiz extends Component {
 
     startQuiz = () => {
         this.setState({index: 0, correct: 0, shouldShow: false});
-        clearLocalNotificiation().then(setLocalNotificiation)
+        clearLocalNotification().then(setLocalNotificiation)
     };
 
     goBackToDeck = () => {
@@ -83,7 +83,7 @@ class Quiz extends Component {
                 : 
                     <View style={{flex: 1}}>
                         <View style={styles.scoreView}>
-                            <Text style={styles.score}>Score: {correct}</Text>
+                            <Text style={styles.score}>Score: {correct} / {questions.length}</Text>
                         </View>
 
                         <View style={{alignItems: 'center', justifyContent: 'space-around', flex: 3}}>
